@@ -1,18 +1,32 @@
 #!/usr/bin/env python2
 import sys
 import time
-global text
-if len(sys.argv) > 1:
-  text = sys.argv[1:]
+
+# Find the -d arguement
+if sys.argv[1] == "-d":
+  n = float(sys.argv[2])
+  a = 3
 else:
+  n = 0.07
+  a = 1
+
+# Defines inputed text
+if len(sys.argv) > 1:
+  text = sys.argv[a:]
+
+elif a == 3 or len(sys.argv) == 1:
   text = sys.stdin
+
+# Simple function to add up the strings in a list
 def stringify(list):
   result = ""
   for i in list:
     result = result + " " + i
   return result[1:]
+
+# Delay
 for i in stringify(text):
-  time.sleep(0.07)
+  time.sleep(n)
   sys.stdout.write(i)
   sys.stdout.flush()
   if i == "\n" or i == ".":
