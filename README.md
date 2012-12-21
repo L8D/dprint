@@ -10,4 +10,4 @@ Usage
     dprint -d <delay in seconds(default is 0.07)> <text>
 Notes
 ---
-* The '-d' option <MUST> be inputed first
+* The '-d' option *MUST* be inputed first
