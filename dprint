@@ -4,18 +4,17 @@ import time
 
 # Find the -d arguement
 if len(sys.argv) > 1:
+
   if sys.argv[1] == "-d":
     n = float(sys.argv[2])
-    a = 3
+    if len(sys.argv) > 3:
+      text = sys.argv[3:]
+    else:
+      text = sys.stdin
+  else:
+    text = sys.argv[1:]
 else:
   n = 0.07
-  a = 1
-
-# Defines inputed text
-if len(sys.argv) > 1:
-  text = sys.argv[a:]
-
-elif a == 3 or len(sys.argv) == 1:
   text = sys.stdin
 
 # Simple function to add up the strings in a list
@@ -35,5 +34,5 @@ for i in stringify(text):
     sys.stdout.write(i)
     sys.stdout.flush()
   if i == "\n":
-    time.sleep(0.7)
+    time.sleep(0.5)
     s = 1
