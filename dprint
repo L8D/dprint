@@ -30,5 +30,5 @@ for i in stringify(text):
   time.sleep(n)
   sys.stdout.write(i)
   sys.stdout.flush()
-  if i == "\n" or i == ".":
+  if i == "\n":
     time.sleep(0.7)
