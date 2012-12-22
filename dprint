@@ -25,10 +25,15 @@ def stringify(list):
     result = result + " " + i
   return result[1:]
 
+s = 0
 # Delay
 for i in stringify(text):
-  time.sleep(n)
-  sys.stdout.write(i)
-  sys.stdout.flush()
+  if s == 1:
+    s = 0
+  else:
+    time.sleep(n)
+    sys.stdout.write(i)
+    sys.stdout.flush()
   if i == "\n":
     time.sleep(0.7)
+    s = 1
