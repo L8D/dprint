@@ -18,9 +18,9 @@ else:
   text = sys.stdin
 
 # Simple function to add up the strings in a list
-def stringify(list):
+def stringify(l):
   result = ""
-  for i in list:
+  for i in l:
     result = result + " " + i
   return result[1:]
 
